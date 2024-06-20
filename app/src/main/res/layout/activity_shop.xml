@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/shopbg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/textViewShop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shop"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewChest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewShop"
+        app:srcCompat="@drawable/chest" />
+
+    <TextView
+        android:id="@+id/textViewCurrentCoinsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#80FFFFFF"
+        android:text="Current Coins:"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewChest" />
+
+    <TextView
+        android:id="@+id/textViewCostLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#80FFFFFF"
+        android:text="You are missing a few coins"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewChest" />
+
+    <TextView
+        android:id="@+id/textViewTotalCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#80FFFFFF"
+        android:text="500"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/textViewCostLabel"
+        app:layout_constraintTop_toBottomOf="@id/textViewCostLabel" />
+
+    <TextView
+        android:id="@+id/textViewCurrentCoins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#80FFFFFF"
+        android:text="3500"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/textViewCurrentCoinsLabel"
+        app:layout_constraintTop_toBottomOf="@id/textViewCurrentCoinsLabel" />
+
+    <TextView
+        android:id="@+id/textViewAnzahlLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Amount:"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewChest" />
+
+    <TextView
+        android:id="@+id/textViewQuantity"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewAnzahlLabel" />
+
+
+    <Button
+        android:id="@+id/buttonBuy"
+        android:layout_width="129dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="5dp"
+        android:backgroundTint="#B3e8833d"
+        android:text="Buy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewQuantity" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSubtract"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/circleminus"
+        app:layout_constraintBottom_toBottomOf="@id/buttonBuy"
+        app:layout_constraintEnd_toStartOf="@id/buttonBuy"
+        app:layout_constraintTop_toBottomOf="@+id/textViewQuantity" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonAdd"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circleplus"
+        app:layout_constraintBottom_toBottomOf="@id/buttonBuy"
+        app:layout_constraintStart_toEndOf="@id/buttonBuy"
+        app:layout_constraintTop_toBottomOf="@id/textViewQuantity" />
+
+    <Button
+        android:id="@+id/buttonHome"
+        android:layout_width="137dp"
+        android:layout_height="54dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#B389487e"
+        android:textColor="#FFFFFF"
+        android:text="Home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonBuy" />
+
+
+    <Button
+        android:id="@+id/buttonAdsRemove"
+        android:layout_width="137dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="8dp"
+        android:backgroundTint="#B389487e"
+        android:textColor="#FFFFFF"
+        android:text="remove ads"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonBuy" />
+
+    <Button
+        android:id="@+id/buttonOdds"
+        android:layout_width="76dp"
+        android:layout_height="37dp"
+        android:text="odds"
+        android:backgroundTint="#B3e8833d"
+        app:layout_constraintBottom_toTopOf="@id/imageViewChest"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativeOdds"
+        android:layout_width="294dp"
+        android:layout_height="391dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/obg2"
+        android:paddingLeft="87dp"
+        android:paddingTop="120dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewChest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.764"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07"
+        tools:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="131dp"
+            android:layout_height="wrap_content"
+            android:text="Common: 70%"
+            android:textAlignment="center"
+            android:textColor="#008000"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="131dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:text="Uncommon: 20%"
+            android:textAlignment="center"
+            android:textColor="#0000FF"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="131dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="60dp"
+            android:text="Rare: 8%"
+            android:textAlignment="center"
+            android:textColor="#FF00FF"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/textViewSpecial"
+            android:layout_width="131dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="90dp"
+            android:text="Special: 2%"
+            android:textAlignment="center"
+            android:textColor="#DAA520"
+            android:textSize="17dp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/profilebg1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/textViewProfileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="ProfileName"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewProfileName"
+        app:srcCompat="@drawable/defaultavatar" />
+
+    <TextView
+        android:id="@+id/textViewProfileTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Novice"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewAvatar" />
+
+    <ScrollView
+        android:id="@+id/ScrollViewAvatar"
+        android:layout_width="234dp"
+        android:layout_height="356dp"
+        android:background="#80FFFFFF"
+        android:elevation="100dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.114"
+        tools:visibility="gone">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/imageViewAvatar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/avatar_1" />
+
+            <ImageView
+                android:id="@+id/imageViewAvatar2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/avatar_2" />
+
+            <ImageView
+                android:id="@+id/imageViewAvatar3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/avatar_3" />
+
+            <ImageView
+                android:id="@+id/imageViewAvatar4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/avatar_4" />
+
+            <ImageView
+                android:id="@+id/imageViewAvatar5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/avatar_5" />
+
+            <ImageView
+                android:id="@+id/imageViewAvatar6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/avatar_6" />
+
+            <ImageView
+                android:id="@+id/imageViewAvatarc1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/c1"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageViewAvatarc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/c2"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageViewAvatarc3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/c3"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageViewAvatarc4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/c4"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageViewAvatarc5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/c5"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageViewAvatarc6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/c6"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageViewAvatarc7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/c7"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageViewAvataruc1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/uc1"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageViewAvataruc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/uc2"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageViewAvataruc3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/uc3"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageViewAvatarr1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/r1"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/confirmButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#B3e8833d"
+                android:text="OK" />
+
+        </GridLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonAvatar"
+        android:layout_width="254dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="12dp"
+        android:text="Change Avatar"
+        android:backgroundTint="#99830a1b"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewProfileTitle" />
+
+    <Button
+        android:id="@+id/buttonTitle"
+        android:layout_width="254dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="12dp"
+        android:text="Change Title"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#99830a1b"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonAvatar" />
+
+    <Button
+        android:id="@+id/buttonChangeName"
+        android:layout_width="254dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="12dp"
+        android:text="Change Name"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#99830a1b"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonTitle" />
+
+    <Button
+        android:id="@+id/buttonAchievements"
+        android:layout_width="254dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#99830a1b"
+        android:text="Achievements"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonChangeName" />
+
+    <TextView
+        android:id="@+id/textViewAdDisable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="72dp"
+        android:text=""
+        android:textSize="25sp"
+
+        app:layout_constraintStart_toStartOf="@id/buttonAchievements"
+        app:layout_constraintTop_toBottomOf="@id/buttonAchievements"
+        app:layout_constraintTop_toTopOf="@id/buttonAchievements" />
+
+    <ScrollView
+        android:id="@+id/titleScrollView"
+        android:layout_width="223dp"
+        android:layout_height="363dp"
+        android:background="#80FFFFFF"
+        android:elevation="100dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonChangeName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.293">
+
+        <LinearLayout
+            android:id="@+id/titleLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+
+    <GridLayout
+        android:id="@+id/gridlayoutNameChange"
+        android:layout_width="418dp"
+        android:layout_height="126dp"
+        android:background="#80FFFFFF"
+        android:columnCount="2"
+        android:elevation="100dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonChangeName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/editTextViewName"
+            android:layout_width="254dp"
+            android:layout_height="wrap_content"
+            android:elevation="100dp"
+            android:hint="Enter your Name"
+            android:minHeight="48dp"
+            android:singleLine="true"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonAchievements"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonConfirmName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="100dp"
+            android:text="Ok"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintStart_toEndOf="@+id/buttonAvatar"
+            app:layout_constraintTop_toTopOf="@+id/buttonAvatar" />
+    </GridLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

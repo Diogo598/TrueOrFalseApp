@@ -1,0 +1,54 @@
+[
+	{
+	"gametime_achievements":[
+		{
+		"nr":1,
+		"description":"Play 1 Game",
+		"condition":1,
+		"unlocked":false
+		},
+		{
+		"nr":2,
+		"description":"Play 5 Games",
+		"condition":5,
+		"unlocked":false
+		},
+		{
+		"nr":3,
+		"description":"Play 10 Games",
+		"condition":10,
+		"unlocked":false
+		},
+		{
+		"nr":4,
+		"description":"Play 25 Games",
+		"condition":25,
+		"unlocked":false
+		},
+		{
+		"nr":5,
+		"description":"Play 50 Games",
+		"condition":50,
+		"unlocked":false
+		},
+		{
+		"nr":6,
+		"description":"Get a Highscorestreak of 3",
+		"condition":3,
+		"unlocked":false
+		},
+		{
+		"nr":7,
+		"description":"Get a Highscorestreak of 10",
+		"condition":10,
+		"unlocked":false
+		},
+		{
+		"nr":8,
+		"description":"Get a Highscorestreak of 25",
+		"condition":25,
+		"unlocked":false
+		}
+	]
+	}
+]

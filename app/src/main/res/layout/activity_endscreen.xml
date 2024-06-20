@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/endscreenbg1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/reportTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:gravity="center"
+        android:text="Report:"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/gamesplayedLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Total Games Played:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reportTextView" />
+
+    <TextView
+        android:id="@+id/gamesplayedTextView"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
+        android:text="186"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/gamesplayedLabelTextView"
+        app:layout_constraintTop_toBottomOf="@id/gamesplayedLabelTextView" />
+
+    <TextView
+        android:id="@+id/streakLabelTextView"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Current Streak:"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/gamesplayedTextView"
+        app:layout_constraintTop_toBottomOf="@id/gamesplayedTextView" />
+
+    <TextView
+        android:id="@+id/streakTextView"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
+        android:text="8"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/streakLabelTextView"
+        app:layout_constraintTop_toBottomOf="@id/streakLabelTextView" />
+
+    <TextView
+        android:id="@+id/highscoreStreakLabelTextView"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Best Streak:"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/streakTextView"
+        app:layout_constraintTop_toBottomOf="@id/streakTextView" />
+
+    <TextView
+        android:id="@+id/highscoreStreakTextView"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
+        android:text="15"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/highscoreStreakLabelTextView"
+        app:layout_constraintTop_toBottomOf="@id/highscoreStreakLabelTextView" />
+
+    <TextView
+        android:id="@+id/coinsEarnedLabelTextView"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Earned Coins:"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/highscoreStreakTextView"
+        app:layout_constraintTop_toBottomOf="@id/highscoreStreakTextView" />
+
+    <TextView
+        android:id="@+id/coinsEarnedTextView"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
+        android:text="60"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/coinsEarnedLabelTextView"
+        app:layout_constraintTop_toBottomOf="@id/coinsEarnedLabelTextView" />
+
+    <TextView
+        android:id="@+id/totalCoinsLabelTextView"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Total Coins:"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/coinsEarnedTextView"
+        app:layout_constraintTop_toBottomOf="@id/coinsEarnedTextView" />
+
+    <TextView
+        android:id="@+id/totalCoinsTextView"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="60"
+        app:layout_constraintStart_toStartOf="@id/totalCoinsLabelTextView"
+        app:layout_constraintTop_toBottomOf="@id/totalCoinsLabelTextView" />
+
+    <Button
+        android:id="@+id/tryAgainButton"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="85dp"
+        android:layout_weight="1"
+        android:backgroundTint="#B3e8833d"
+        android:text="Try Again"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/homeButton"
+        app:layout_constraintTop_toBottomOf="@+id/totalCoinsTextView" />
+
+    <Button
+        android:id="@+id/homeButton"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="1"
+        android:backgroundTint="#B389487e"
+        android:text="Home"
+        app:layout_constraintEnd_toStartOf="@+id/tryAgainButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalCoinsTextView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
