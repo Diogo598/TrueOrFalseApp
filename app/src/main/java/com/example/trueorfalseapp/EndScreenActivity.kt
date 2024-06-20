@@ -120,7 +120,7 @@ class EndScreenActivity : AppCompatActivity() {
         }
         if (beststreak>25){
             val isUnlocked=jsonManager.getUnlocksFromEntryAchievementDataJson(this,8)
-                jsonManager.updateEntryAchievementDataJson(this,filenameAchievements,8,true)
+            jsonManager.updateEntryAchievementDataJson(this,filenameAchievements,8,true)
 
             if(isUnlocked==false){
                 achievementPop()

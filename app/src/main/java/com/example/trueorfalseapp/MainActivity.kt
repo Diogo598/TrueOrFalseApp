@@ -23,8 +23,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         var multiplayerButton=findViewById<Button>(R.id.buttonMultiplayer)
-            multiplayerButton.setOnClickListener {
-                Toast.makeText(this,"Currently not implemented",Toast.LENGTH_SHORT).show()
+        multiplayerButton.setOnClickListener {
+            Toast.makeText(this,"Currently not implemented",Toast.LENGTH_SHORT).show()
             }
 
         val optionsButton = findViewById<Button>(R.id.buttonoptions)
@@ -72,8 +72,7 @@ class MainActivity : AppCompatActivity() {
             "r2",
             "s1"
         )
-            unlockKeys.map { key ->
-            val unlocked=status?.get(key) ?: false
+        unlockKeys.map { key -> val unlocked=status?.get(key) ?: false
             Log.d("ProfileActivity", "$key unlocked: $unlocked")
             unlocked
         }
