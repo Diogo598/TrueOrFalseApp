@@ -32,8 +32,10 @@ git clone https://github.com/Diogo598/TrueOrFalseApp.git
 3.Build and run the app on an emulator or physical device.
 
 Screenshots and Demos:
-<img src="https://github.com/Diogo598/TrueOrFalseApp/blob/master/Achievements.jpg" alt="Achievements Screen" title="Achievements screen showing the various accomplishments users can unlock." width="200"/>
-[You can add some screenshots and demos of the app here]
-
+<div style="display: flex; flex-wrap: wrap;">
+  <img src="https://github.com/Diogo598/TrueOrFalseApp/blob/master/Achievements.jpg" alt="Achievements Screen" title="Achievements screen showing the various accomplishments users can unlock." width="300"/>
+  <img src="https://github.com/Diogo598/TrueOrFalseApp/blob/master/AnotherImage.jpg" alt="Another Screen" title="Another screen showing different functionality." width="300"/>
+  <!-- Add more images here in the same way -->
+</div>
 Feedback and Contributions:
 Contributions are welcome! Please open an issue or create a pull request.
