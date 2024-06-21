@@ -32,7 +32,7 @@ git clone https://github.com/Diogo598/TrueOrFalseApp.git
 3.Build and run the app on an emulator or physical device.
 
 Screenshots and Demos:
-<img src="https://github.com/Diogo598/TrueOrFalseApp/blob/master/Achievements.jpg" alt="Achievements Screen" title="Achievements screen showing the various accomplishments users can unlock." width="400"/>
+<img src="https://github.com/Diogo598/TrueOrFalseApp/blob/master/Achievements.jpg" alt="Achievements Screen" title="Achievements screen showing the various accomplishments users can unlock." width="200"/>
 [You can add some screenshots and demos of the app here]
 
 Feedback and Contributions:
