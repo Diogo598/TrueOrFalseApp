@@ -35,12 +35,10 @@ Screenshots and Demos:
 <div style="display: flex; flex-wrap: wrap;">
   <img src="https://github.com/Diogo598/TrueOrFalseApp/blob/master/Home.jpg" alt="Achievements Screen" title="Achievements screen showing the various accomplishments users can unlock." width="300"/>
   <img src="https://github.com/Diogo598/TrueOrFalseApp/blob/master/Ex1.jpg"alt="Screen2" title="Screen2." width="300"/>
-  <img src="https://github.com/Diogo598/TrueOrFalseApp/blob/master/Ex2.jpg" alt="Screen3" title="Screen3." width="300"/>
   <img src="https://github.com/Diogo598/TrueOrFalseApp/blob/master/Ex3.jpg" alt="Screen4" title="Screen4." width="300"/>
+  <img src="https://github.com/Diogo598/TrueOrFalseApp/blob/master/Profile.jpg" alt="Screen7" title="Screen7." width="300"/>
   <img src="https://github.com/Diogo598/TrueOrFalseApp/blob/master/EndScreen.jpg" alt="Screen5" title="Screen5." width="300"/>
   <img src="https://github.com/Diogo598/TrueOrFalseApp/blob/master/Shop.jpg" alt="Screen6" title="Screen6." width="300"/>
-  <img src="https://github.com/Diogo598/TrueOrFalseApp/blob/master/Profile.jpg" alt="Screen7" title="Screen7." width="300"/>
-  <img src="https://github.com/Diogo598/TrueOrFalseApp/blob/master/Achievements.jpg" alt="Screen8" title="Screen8." width="300"/>
   <!-- Add more images here in the same way -->
 </div>
 Feedback and Contributions:
