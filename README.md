@@ -2,11 +2,13 @@ TrueOrFalse App
 GitHub: TrueOrFalse App Repository
 
 Description:
+
 TrueOrFalse is an engaging and interactive Android app where users can answer statements with "true" or "false." 
 The app features a comprehensive point system, various achievements, and an in-app shop.
 Additionally, the app includes an impressive animation created with Jetpack Compose.
 
 Main Features:
+
 Answer statements with "true" or "false"
 Integrated coin system to use the shop
 Unlock achievements for special accomplishments and to track progress
