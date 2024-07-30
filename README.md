@@ -21,6 +21,7 @@ Additionally, the app includes an impressive animation created with Jetpack Comp
 - **UI Frameworks**: Jetpack Compose (for shop animation), XML (for main UI)
 - **Development Environment**: Android Studio
 - **Version Control**: Git, GitHub
+- **Firebase**: Multiplayer
 
 ## Future Work
 - **Multiplayer**:Basic release (very soon !)
