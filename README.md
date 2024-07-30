@@ -29,9 +29,6 @@ Additionally, the app includes an impressive animation created with Jetpack Comp
 - **Extend Shop**: InApp purchases and the ability to remove Ads
 - **Release**: Currently beeing Tested, Release in Playstore very soon
 
-- **Programming Language**: Kotlin
-- **UI Frameworks**: Jetpack Compose (for shop animation), XML (for main UI) 
-
 ## Installation and Usage
 
 1. Clone the repository:
