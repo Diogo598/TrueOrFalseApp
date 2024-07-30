@@ -23,10 +23,10 @@ Additionally, the app includes an impressive animation created with Jetpack Comp
 - **Version Control**: Git, GitHub
 
 ## Future Work
--**Multiplayer**:Basic release (very soon !)
--**Extend Multiplayer**: Matchmaking, Elo , Leaderboards
--**Extend Shop**: InApp purchases and the ability to remove Ads
--**Release**: Currently beeing Tested, Release in Playstore very soon
+- **Multiplayer**:Basic release (very soon !)
+- **Extend Multiplayer**: Matchmaking, Elo , Leaderboards
+- **Extend Shop**: InApp purchases and the ability to remove Ads
+- **Release**: Currently beeing Tested, Release in Playstore very soon
 
 - **Programming Language**: Kotlin
 - **UI Frameworks**: Jetpack Compose (for shop animation), XML (for main UI) 
