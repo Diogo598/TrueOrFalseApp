@@ -2,13 +2,11 @@ package com.example.trueorfalseapp
 
 
 import android.content.Intent
-import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     private var unlockMananger=UnlocksManager
@@ -24,7 +22,9 @@ class MainActivity : AppCompatActivity() {
 
         var multiplayerButton=findViewById<Button>(R.id.buttonMultiplayer)
         multiplayerButton.setOnClickListener {
-            Toast.makeText(this,"Currently not implemented",Toast.LENGTH_SHORT).show()
+            //val intent= Intent(this,MultiplayerMenuActivity::class.java)
+            //startActivity(intent)
+            Toast.makeText(this,"Will be implemented soon",Toast.LENGTH_SHORT).show()
             }
 
         val optionsButton = findViewById<Button>(R.id.buttonoptions)

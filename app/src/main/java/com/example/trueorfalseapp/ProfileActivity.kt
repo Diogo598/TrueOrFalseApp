@@ -4,10 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
-import android.opengl.Visibility
-import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -17,6 +15,7 @@ import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class ProfileActivity : AppCompatActivity() {
     var unlockMananger = UnlocksManager
@@ -59,14 +58,14 @@ class ProfileActivity : AppCompatActivity() {
         R.drawable.uc3,
         R.drawable.r1
     )
-    private lateinit var avatarButton: Button
+    private lateinit var changeAvatarButton: Button
+    private lateinit var changeTitleButton: Button
+    private lateinit var changeNameButton: Button
     private lateinit var achievementButton: Button
     private lateinit var confirmButton: Button
     private lateinit var titleLinearLayout: LinearLayout
     private lateinit var textViewProfileTitle: TextView
-    private lateinit var buttonTitle: Button
     private lateinit var titleScrollView: ScrollView
-    private lateinit var changeNameButton: Button
     private lateinit var textViewProfileName: TextView
     private lateinit var editTextName: EditText
     private lateinit var buttonConfirmName: Button
@@ -82,11 +81,11 @@ class ProfileActivity : AppCompatActivity() {
         titleLinearLayout = findViewById(R.id.titleLinearLayout)
         confirmButton = findViewById(R.id.confirmButton)
         scrollViewAvatar = findViewById(R.id.ScrollViewAvatar)
-        avatarButton = findViewById(R.id.buttonAvatar)
+        changeAvatarButton = findViewById(R.id.buttonAvatar)
         imageViewAvatar = findViewById(R.id.imageViewAvatar)
         achievementButton = findViewById(R.id.buttonAchievements)
         textViewProfileTitle = findViewById(R.id.textViewProfileTitle)
-        buttonTitle = findViewById(R.id.buttonTitle)
+        changeTitleButton = findViewById(R.id.buttonTitle)
         titleScrollView = findViewById(R.id.titleScrollView)
         changeNameButton = findViewById(R.id.buttonChangeName)
         textViewProfileName = findViewById(R.id.textViewProfileName)
@@ -127,6 +126,7 @@ class ProfileActivity : AppCompatActivity() {
             }
         }
         changeNameButton.setOnClickListener {
+            hideAllButtons()
             changeNameVisibility(gridLayoutNameChange)
         }
 
@@ -136,13 +136,15 @@ class ProfileActivity : AppCompatActivity() {
                 textViewProfileName.text = editTextName.text.toString()
                 saveUserName(userInput)
                 changeNameVisibility(gridLayoutNameChange)
+                showAllButtons()
             } else {
                 Toast.makeText(this, "Blank Text is not allowed", Toast.LENGTH_SHORT).show()
             }
         }
 
 
-        buttonTitle.setOnClickListener {
+        changeTitleButton.setOnClickListener {
+            hideAllButtons()
             changeTitleVisibility(titleScrollView)
         }
 
@@ -151,9 +153,11 @@ class ProfileActivity : AppCompatActivity() {
             changeMainImage()
             changeAvatarListVisibility(scrollViewAvatar)
             saveSelectedAvatar()
+            showAllButtons()
         }
 
-        avatarButton.setOnClickListener {
+        changeAvatarButton.setOnClickListener {
+            hideAllButtons()
             changeAvatarListVisibility(scrollViewAvatar)
         }
         achievementButton.setOnClickListener {
@@ -161,7 +165,18 @@ class ProfileActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
+    private fun hideAllButtons(){
+        changeAvatarButton.visibility=View.GONE
+        changeTitleButton.visibility=View.GONE
+        changeNameButton.visibility=View.GONE
+        achievementButton.visibility=View.GONE
+    }
+    private fun showAllButtons(){
+        changeAvatarButton.visibility=View.VISIBLE
+        changeTitleButton.visibility=View.VISIBLE
+        changeNameButton.visibility=View.VISIBLE
+        achievementButton.visibility=View.VISIBLE
+    }
     private fun selectAvatar(avatarResId: Int, imageView: ImageView) {
         // Remove border from previously selected ImageView
         if (currentImageView != null && currentImageView != imageView) {
@@ -210,6 +225,7 @@ class ProfileActivity : AppCompatActivity() {
     private fun changeTitleVisibility(titleScrollView: ScrollView) {
         if (titleScrollView.visibility == View.VISIBLE) {
             titleScrollView.visibility = View.INVISIBLE
+            showAllButtons()
         } else {
             titleScrollView.visibility = View.VISIBLE
         }
