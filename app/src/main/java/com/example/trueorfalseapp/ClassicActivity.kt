@@ -1,5 +1,6 @@
 package com.example.trueorfalseapp
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.DisplayMetrics
@@ -8,7 +9,6 @@ import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.size
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
@@ -20,7 +20,6 @@ import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStream
 import java.io.InputStreamReader
-import java.util.ArrayList
 import java.util.Random
 
 class ClassicActivity : AppCompatActivity() {
@@ -57,8 +56,13 @@ class ClassicActivity : AppCompatActivity() {
         }
     }
     private fun loadStatements() {
+        var language=loadLanguage()
+        var fileName="statements.txt"
+        if (language=="German"){
+                fileName="statementsde.txt"
+            }
         try {
-            val inputStream: InputStream = assets.open("statements.txt")
+            val inputStream: InputStream = assets.open(fileName)
             val reader = BufferedReader(InputStreamReader(inputStream))
             var line: String?
             while (reader.readLine().also { line = it } != null) {
@@ -72,6 +76,11 @@ class ClassicActivity : AppCompatActivity() {
         } catch (e: IOException) {
             e.printStackTrace()
         }
+    }
+    private fun loadLanguage():String{
+        val sharedPreferences = getSharedPreferences("LanguagePreferences", Context.MODE_PRIVATE)
+        var selectedLanguage= sharedPreferences.getString("selectedLanguage", "English")
+        return selectedLanguage.toString()
     }
     private fun displayNextStatement() {
         if (statements.isNotEmpty()) {

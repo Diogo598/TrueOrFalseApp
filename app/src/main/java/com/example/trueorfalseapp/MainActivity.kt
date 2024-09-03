@@ -1,25 +1,36 @@
 package com.example.trueorfalseapp
 
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
+import android.widget.RadioButton
+import android.widget.ScrollView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     private var unlockMananger=UnlocksManager
+    private lateinit var radioEnglish:RadioButton
+    private lateinit var radioGerman: RadioButton
+    private lateinit var languageOkButton:Button
+    private lateinit var languageScrollView:ScrollView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        radioEnglish=findViewById(R.id.radioEnglish)
+        radioGerman=findViewById(R.id.radioGerman)
+        languageOkButton=findViewById(R.id.languageOkButton)
+        languageScrollView=findViewById(R.id.languageScrollView)
         val singleplayerButton = findViewById<Button>(R.id.buttonsp)
         singleplayerButton.setOnClickListener{
             val intent= Intent(this,ClassicActivity::class.java)
             startActivity(intent)
         }
-
         var multiplayerButton=findViewById<Button>(R.id.buttonMultiplayer)
         multiplayerButton.setOnClickListener {
             //val intent= Intent(this,MultiplayerMenuActivity::class.java)
@@ -37,6 +48,22 @@ class MainActivity : AppCompatActivity() {
             val intent= Intent(this,ProfileActivity::class.java)
             startActivity(intent)
         }
+        val languageButton=findViewById<Button>(R.id.buttonLanguage)
+        languageButton.setOnClickListener {
+            changeLanguageLayout()
+        }
+        languageOkButton.setOnClickListener {
+                val sharedPreferences = getSharedPreferences("LanguagePreferences", Context.MODE_PRIVATE)
+            if (radioGerman.isChecked){
+                sharedPreferences.edit().putString("selectedLanguage", "German").apply()
+                Toast.makeText(this, "Language was successfully changed to German", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                sharedPreferences.edit().putString("selectedLanguage", "English").apply()
+                Toast.makeText(this, "Language was successfully changed to English", Toast.LENGTH_SHORT).show()
+            }
+            changeLanguageLayout()
+        }
         val achievementclass= JsonManager
 
         var achievementEntry=achievementclass.getEntryFromGameTimeAchievement(this,5)
@@ -47,6 +74,14 @@ class MainActivity : AppCompatActivity() {
 
 
 
+    }
+    private fun changeLanguageLayout(){
+        if(languageScrollView.visibility== View.GONE){
+        languageScrollView.visibility=View.VISIBLE
+        }
+        else{
+            languageScrollView.visibility=View.GONE
+        }
     }
     private fun checkUnlocks() {
         val status = unlockMananger.getUnlock(this)
