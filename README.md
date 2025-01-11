@@ -6,6 +6,9 @@ TrueOrFalse is an engaging and interactive Android app where users can answer st
 The app features a comprehensive point system, various achievements, and an in-app shop.
 Additionally, the app includes an impressive animation created with Jetpack Compose.
 
+Now also available in the Google Playstore!:
+https://play.google.com/store/apps/details?id=com.dt.trueorfalseapp&hl=de
+
 ## Main Features
 
 - Answer statements with "true" or "false"
