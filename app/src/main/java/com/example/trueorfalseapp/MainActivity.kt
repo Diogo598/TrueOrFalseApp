@@ -33,9 +33,8 @@ class MainActivity : AppCompatActivity() {
         }
         var multiplayerButton=findViewById<Button>(R.id.buttonMultiplayer)
         multiplayerButton.setOnClickListener {
-            //val intent= Intent(this,MultiplayerMenuActivity::class.java)
-            //startActivity(intent)
-            Toast.makeText(this,"Will be implemented soon",Toast.LENGTH_SHORT).show()
+            val intent= Intent(this,MultiplayerMenuActivity::class.java)
+            startActivity(intent)
             }
 
         val optionsButton = findViewById<Button>(R.id.buttonoptions)

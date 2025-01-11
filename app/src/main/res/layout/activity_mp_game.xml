@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:padding="15dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/waitingLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Waiting Message Layout -->
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:layout_marginBottom="10dp"
+            android:text="Waiting for an Opponent ..."
+            android:textColor="@android:color/black"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/sessionIdLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Your Session ID is :"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="@id/textView1"
+            app:layout_constraintTop_toBottomOf="@id/textView1" />
+
+        <TextView
+            android:id="@+id/sessionIdText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="30dp"
+            android:text="123"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            app:layout_constraintStart_toEndOf="@id/sessionIdLabel"
+            app:layout_constraintTop_toBottomOf="@id/textView1" />
+
+        <TextView
+            android:id="@+id/timeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Queue Time:"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/textView1"
+            app:layout_constraintTop_toBottomOf="@id/sessionIdLabel" />
+
+        <TextView
+            android:id="@+id/timetextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="30dp"
+            android:text="20 s"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@id/timeLabel"
+            app:layout_constraintTop_toBottomOf="@id/sessionIdLabel" />
+
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timeLabel" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/postLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="30dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/postWaitingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:background="@android:color/white"
+            android:alpha="0.7">
+
+            <TextView
+                android:id="@+id/fetchingMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Waiting for other Player..."
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/postEndLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+        <TextView
+            android:id="@+id/postHeadlineTextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="It's a Tie! "
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </TextView>
+        <ImageView
+            android:id="@+id/postWinnerAvatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/postHeadlineTextview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/avatar_6"
+            >
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/postWinnerName"
+            android:text="WinnerName"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/postWinnerAvatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        </TextView>
+
+        <TextView
+            android:id="@+id/postWinnerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unkillable Demon"
+            android:layout_marginTop="10dp"
+            android:textStyle="italic"
+            app:layout_constraintTop_toBottomOf="@+id/postWinnerName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        </TextView>
+        <TextView
+            android:id="@+id/postWinnerWinsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wins"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/postWinnerTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        </TextView>
+        <TextView
+            android:id="@+id/postWinnerWins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/postWinnerWinsLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        </TextView>
+        <TextView
+            android:id="@+id/postWinnerDrawsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Draws"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/postWinnerWins"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        </TextView>
+        <TextView
+            android:id="@+id/postWinnerDraws"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/postWinnerDrawsLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        </TextView>
+        <TextView
+            android:id="@+id/postWinnerLoosesLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Looses"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/postWinnerDraws"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        </TextView>
+        <TextView
+            android:id="@+id/postWinnerLooses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/postWinnerLoosesLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        </TextView>
+
+        <Button
+            android:id="@+id/postOkButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            app:layout_constraintTop_toBottomOf="@id/postWinnerLooses"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        </Button>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/gamelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:padding="15dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <!-- Current level text view -->
+        <TextView
+            android:id="@+id/currentLevelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Statement"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewPlayer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:text="Player1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/currentLevelTextView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewResultP1_1"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="60dp"
+            app:layout_constraintBottom_toBottomOf="@+id/totallabel"
+            app:layout_constraintStart_toEndOf="@+id/totallabel"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPlayer1"
+            app:srcCompat="@drawable/defaultcircmp" />
+
+        <ImageView
+            android:id="@+id/imageViewResultP1_2"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="1dp"
+            app:layout_constraintBottom_toBottomOf="@+id/totallabel"
+            app:layout_constraintStart_toEndOf="@+id/imageViewResultP1_1"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPlayer1"
+            app:srcCompat="@drawable/defaultcircmp" />
+
+        <ImageView
+            android:id="@+id/imageViewResultP1_3"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="1dp"
+            app:layout_constraintBottom_toBottomOf="@+id/totallabel"
+            app:layout_constraintStart_toEndOf="@+id/imageViewResultP1_2"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPlayer1"
+            app:srcCompat="@drawable/defaultcircmp" />
+
+        <ImageView
+            android:id="@+id/imageViewResultP1_4"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="1dp"
+            app:layout_constraintBottom_toBottomOf="@+id/totallabel"
+            app:layout_constraintStart_toEndOf="@+id/imageViewResultP1_3"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPlayer1"
+            app:srcCompat="@drawable/defaultcircmp" />
+
+        <ImageView
+            android:id="@+id/imageViewResultP1_5"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="1dp"
+            app:layout_constraintBottom_toBottomOf="@+id/totallabel"
+            app:layout_constraintStart_toEndOf="@id/imageViewResultP1_4"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPlayer1"
+            app:srcCompat="@drawable/defaultcircmp" />
+
+        <TextView
+            android:id="@+id/textViewPlayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:text="Player2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/currentLevelTextView"
+            app:layout_constraintTop_toBottomOf="@id/imageViewResultP1_1" />
+
+        <ImageView
+            android:id="@+id/imageViewResultP2_1"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="60dp"
+            app:layout_constraintStart_toEndOf="@+id/totallabel"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPlayer2"
+            app:srcCompat="@drawable/defaultcircmp" />
+
+        <ImageView
+            android:id="@+id/imageViewResultP2_2"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="1dp"
+            app:layout_constraintStart_toEndOf="@+id/imageViewResultP2_1"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPlayer2"
+            app:srcCompat="@drawable/defaultcircmp" />
+
+        <ImageView
+            android:id="@+id/imageViewResultP2_3"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="1dp"
+            app:layout_constraintStart_toEndOf="@+id/imageViewResultP2_2"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPlayer2"
+            app:srcCompat="@drawable/defaultcircmp" />
+
+        <ImageView
+            android:id="@+id/imageViewResultP2_4"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="1dp"
+            app:layout_constraintStart_toEndOf="@+id/imageViewResultP2_3"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPlayer2"
+            app:srcCompat="@drawable/defaultcircmp" />
+
+        <ImageView
+            android:id="@+id/imageViewResultP2_5"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="1dp"
+            app:layout_constraintStart_toEndOf="@+id/imageViewResultP2_4"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPlayer2"
+            app:srcCompat="@drawable/defaultcircmp" />
+
+
+        <!-- Streak text view -->
+        <TextView
+            android:id="@+id/streakTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/currentLevelTextView" />
+
+
+        <!-- Question text view -->
+
+        <!-- Answer buttons layout -->
+
+        <TextView
+            android:id="@+id/totallabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="4dp"
+            android:text="/5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/streakTextView"
+            app:layout_constraintTop_toBottomOf="@+id/currentLevelTextView" />
+
+        <TextView
+            android:id="@+id/textViewTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="152dp"
+            android:layout_marginBottom="148dp"
+            android:text="10 s"
+            app:layout_constraintBottom_toTopOf="@+id/falseButton"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/statementTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:background="#E6a99d8d"
+            android:paddingTop="15dp"
+            android:text="Waiting "
+            android:textColor="#f8e7d5"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/streakTextView" />
+        <TextView
+            android:id="@+id/statementTextView2"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:background="#E6a99d8d"
+            android:paddingTop="15dp"
+            android:text="Waiting "
+            android:textColor="#f8e7d5"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/streakTextView" />
+
+
+        <Button
+            android:id="@+id/trueButton"
+            android:layout_width="160dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#B3e88438"
+            android:text="True"
+            android:textColor="#f8e7d5"
+            app:layout_constraintEnd_toStartOf="@+id/falseButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statementTextView" />
+
+        <Button
+            android:id="@+id/falseButton"
+            android:layout_width="160dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:backgroundTint="#B389487e"
+            android:text="False"
+            android:textColor="#f8e7d5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/trueButton"
+            app:layout_constraintTop_toBottomOf="@+id/statementTextView" />
+
+        <FrameLayout
+            android:id="@+id/adLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toBottomOf="@+id/trueButton"></FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

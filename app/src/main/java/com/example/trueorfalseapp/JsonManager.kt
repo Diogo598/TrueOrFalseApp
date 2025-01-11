@@ -1,13 +1,9 @@
 package com.example.trueorfalseapp
-import java.io.File
-import com.google.gson.Gson
 import android.content.Context
-import kotlinx.coroutines.handleCoroutineException
-import java.io.BufferedReader
+import com.google.gson.Gson
+import java.io.File
 import java.io.FileInputStream
-import java.io.FileReader
 import java.io.IOException
-import java.io.InputStreamReader
 
 object JsonManager {
     var achievementsjson="achievements.json"
@@ -16,8 +12,11 @@ object JsonManager {
     data class UserData(
         val games_played:Int,
         val highscorestreak: Int,
-        val coins: Int
-
+        val coins: Int,
+    )
+    data class onlineData(
+        val onlineGamesPlayed:Int,
+        val onlineWins: Int
     )
 
     data class GameTimeAchievement(
@@ -229,6 +228,7 @@ object JsonManager {
 
         saveJsonToFile(context,jsonString, fileName)
     }
+
     fun editEntryFromUserData(context: Context,fileName: String, userDataList:List<UserData>?, earnedcoins: Int,currentHighScoreStreak: Int,games_played: Int){
         var usercoin = userDataList?.get(0)?.coins?: 0
         var userHighScoreStreak = userDataList?.get(0)?.highscorestreak?: 0

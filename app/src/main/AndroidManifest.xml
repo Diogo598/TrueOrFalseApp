@@ -45,6 +45,12 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".Animation"
             android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MpActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MultiplayerMenuActivity"
+            android:exported="true"
             android:screenOrientation="portrait">
 
         </activity>

@@ -1,6 +1,5 @@
 package com.example.trueorfalseapp
 
-import com.example.trueorfalseapp.JsonManager
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
